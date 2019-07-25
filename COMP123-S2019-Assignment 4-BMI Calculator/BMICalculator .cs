@@ -19,14 +19,17 @@ namespace COMP123_S2019_Assignment_4_BMI_Calculator
 
         private void ImperialRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            ImperialGroupbox.Visible = true;
-            MetricGroupBox.Visible = false;
+           
         }
 
         private void MetricRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            MetricGroupBox.Visible = true;
-            ImperialGroupbox.Visible = false;
+            
+        }
+
+        private void CalculatorTableLayoutPanel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
