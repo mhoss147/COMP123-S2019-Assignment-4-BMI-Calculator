@@ -72,10 +72,10 @@
             // 
             this.heightText.BackColor = System.Drawing.SystemColors.Control;
             this.heightText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.heightText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.heightText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.heightText.Location = new System.Drawing.Point(9, 47);
             this.heightText.Name = "heightText";
-            this.heightText.Size = new System.Drawing.Size(78, 23);
+            this.heightText.Size = new System.Drawing.Size(78, 22);
             this.heightText.TabIndex = 20;
             this.heightText.Text = "Height:";
             // 
@@ -108,28 +108,30 @@
             // 
             this.weightText.BackColor = System.Drawing.SystemColors.Control;
             this.weightText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.weightText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weightText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weightText.Location = new System.Drawing.Point(9, 80);
             this.weightText.Name = "weightText";
-            this.weightText.Size = new System.Drawing.Size(78, 23);
+            this.weightText.Size = new System.Drawing.Size(78, 22);
             this.weightText.TabIndex = 23;
             this.weightText.Text = "Weight:";
             // 
             // heightTextBox
             // 
-            this.heightTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.heightTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.heightTextBox.Location = new System.Drawing.Point(116, 40);
             this.heightTextBox.Name = "heightTextBox";
-            this.heightTextBox.Size = new System.Drawing.Size(89, 30);
+            this.heightTextBox.Size = new System.Drawing.Size(89, 29);
             this.heightTextBox.TabIndex = 24;
+            this.heightTextBox.Click += new System.EventHandler(this.ActiveTextBox_click);
             // 
             // weightTextBox
             // 
-            this.weightTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weightTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weightTextBox.Location = new System.Drawing.Point(116, 80);
             this.weightTextBox.Name = "weightTextBox";
-            this.weightTextBox.Size = new System.Drawing.Size(89, 30);
+            this.weightTextBox.Size = new System.Drawing.Size(89, 29);
             this.weightTextBox.TabIndex = 25;
+            this.weightTextBox.Click += new System.EventHandler(this.ActiveTextBox_click);
             // 
             // ResultTextBox
             // 
@@ -157,7 +159,7 @@
             // 
             this.calculateBMIButton.BackColor = System.Drawing.Color.DarkTurquoise;
             this.calculateBMIButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calculateBMIButton.Location = new System.Drawing.Point(5, 116);
+            this.calculateBMIButton.Location = new System.Drawing.Point(64, 116);
             this.calculateBMIButton.Name = "calculateBMIButton";
             this.calculateBMIButton.Size = new System.Drawing.Size(185, 35);
             this.calculateBMIButton.TabIndex = 27;
@@ -383,20 +385,20 @@
             // 
             this.weightUnitLabel.BackColor = System.Drawing.SystemColors.Control;
             this.weightUnitLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.weightUnitLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weightUnitLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weightUnitLabel.Location = new System.Drawing.Point(221, 82);
             this.weightUnitLabel.Name = "weightUnitLabel";
-            this.weightUnitLabel.Size = new System.Drawing.Size(63, 23);
+            this.weightUnitLabel.Size = new System.Drawing.Size(63, 22);
             this.weightUnitLabel.TabIndex = 33;
             // 
             // heightUnitLabel
             // 
             this.heightUnitLabel.BackColor = System.Drawing.SystemColors.Control;
             this.heightUnitLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.heightUnitLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.heightUnitLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.heightUnitLabel.Location = new System.Drawing.Point(221, 41);
             this.heightUnitLabel.Name = "heightUnitLabel";
-            this.heightUnitLabel.Size = new System.Drawing.Size(63, 23);
+            this.heightUnitLabel.Size = new System.Drawing.Size(63, 22);
             this.heightUnitLabel.TabIndex = 32;
             // 
             // BMICalculator
@@ -422,6 +424,8 @@
             this.Controls.Add(this.BMICalculatorLabel);
             this.Name = "BMICalculator";
             this.Text = "BMI Calculator";
+            this.Load += new System.EventHandler(this.BMICalculator_Load);
+            this.Click += new System.EventHandler(this.ActiveTextBox_click);
             this.CalculatorTableLayoutPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
