@@ -44,6 +44,8 @@ namespace COMP123_S2019_Assignment_4_BMI_Calculator
 
         }
 
+
+
         private void CalculatorTableLayoutPanel_Click(object sender, EventArgs e)
         {
             Button TheButton = sender as Button;
@@ -103,13 +105,13 @@ namespace COMP123_S2019_Assignment_4_BMI_Calculator
 
                 else
                 {
-                    ResultTextBox.Text = "Please enter all values";
+                    ResultTextBox.Text = "Please fill out form";
                     ResultTextBox.ForeColor = Color.Red;
                 }
             }
             else
             {
-                ResultTextBox.Text = "Please enter all values";
+                ResultTextBox.Text = "Please fill out form";
                 ResultTextBox.ForeColor = Color.Red;
             }
         }
@@ -119,7 +121,7 @@ namespace COMP123_S2019_Assignment_4_BMI_Calculator
             ProgressBar.Maximum = 4;
             if (Result < 18.5)
             {
-                ConditionTextBox.Text = "Underweight";
+                ConditionTextBox.Text = "Under Weight";
                 ConditionTextBox.ForeColor = Color.SaddleBrown;
                 ProgressBar.Value += 1;
                 ProgressBar.ForeColor = Color.SaddleBrown;
@@ -133,7 +135,7 @@ namespace COMP123_S2019_Assignment_4_BMI_Calculator
             }
             else if (Result >= 25 && Result <= 29.9)
             {
-                ConditionTextBox.Text = "Overweight";
+                ConditionTextBox.Text = "Over Weight";
                 ConditionTextBox.ForeColor = Color.Orange;
                 ProgressBar.Value += 3;
                 ProgressBar.ForeColor = Color.Orange;
@@ -154,18 +156,16 @@ namespace COMP123_S2019_Assignment_4_BMI_Calculator
             ActiveTextBox = sender as TextBox;
         }
 
+        private void MetricButton_Click(object sender, EventArgs e)
+        {
+            heightUnitLabel.Text = "cm";
+            weightUnitLabel.Text = "kg";
+        }
 
-
-
-
-        //private void ImperialRadioButton_CheckedChanged(object sender, EventArgs e)
-        //{
-
-        //}
-
-        //private void MetricRadioButton_CheckedChanged(object sender, EventArgs e)
-        //{
-
-        //}
+        private void ImperialButton_Click(object sender, EventArgs e)
+        {
+            heightUnitLabel.Text = "in";
+            weightUnitLabel.Text = "lb";
+        }
     }
 }
