@@ -14,7 +14,7 @@ namespace COMP123_S2019_Assignment_4_BMI_Calculator
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
+            //Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new BMICalculator());
         }

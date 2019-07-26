@@ -29,13 +29,33 @@ namespace COMP123_S2019_Assignment_4_BMI_Calculator
             clearKeypad();
             ActiveTextBox = heightTextBox;
             heightUnitLabel.Text = "cm";
-            weightUnitLabel.Text = "kg";
+            WeightUnitLabel.Text = "kg";
         }
 
+        /// <summary>
+        /// This is the Event Handler for the MetricRadioButton click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MetricRadioButton_Click(object sender, EventArgs e)
+        {
+            heightUnitLabel.Text = "cm";
+            WeightUnitLabel.Text = "kg";
+        }
+        /// <summary>
+        /// This is the Event Handler for the ImperialRadioButton click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ImperialRadioButton_Click(object sender, EventArgs e)
+        {
+            heightUnitLabel.Text = "in";
+            WeightUnitLabel.Text = "lb";
+        }
         private void clearKeypad()
         {
             ResultTextBox.Text = "";
-            outputString = "";
+            outputString = " ";
             outputValue = 0;
             heightTextBox.Text = "";
             weightTextBox.Text = "";
@@ -48,23 +68,29 @@ namespace COMP123_S2019_Assignment_4_BMI_Calculator
 
         private void CalculatorTableLayoutPanel_Click(object sender, EventArgs e)
         {
-            Button TheButton = sender as Button;
-            var tag = TheButton.Tag.ToString();
+            Button button = sender as Button;
+            var tag = button.Tag.ToString();
             int numericValue = 0;
             bool numericResult = int.TryParse(tag, out numericValue);
             if (numericResult)
             {
-                //outputString += tag;
-                //ActiveTextBox.Text = outputString;
-                ActiveTextBox.Text += tag;
+                outputString += tag;
+               ActiveTextBox.Text = outputString;
+                //ActiveTextBox.Text += tag;
             }
             else
             {
                 switch (tag)
                 {
                     case "backspace":
-                        outputString = outputString.Remove(outputString.Length - 1);
-                        ActiveTextBox.Text = outputString;
+                        try
+                        {
+                            outputString = outputString.Remove(outputString.Length - 1);
+                            ActiveTextBox.Text = outputString;
+                        } catch
+                        {
+                            MessageBox.Show("To erase, Click inside the cell and use Keyboard backspace");
+                        }
                         break;
                     case "clear":
                         clearKeypad();
@@ -122,9 +148,9 @@ namespace COMP123_S2019_Assignment_4_BMI_Calculator
             if (Result < 18.5)
             {
                 ConditionTextBox.Text = "Under Weight";
-                ConditionTextBox.ForeColor = Color.SaddleBrown;
+                ConditionTextBox.ForeColor = Color.Yellow;
                 ProgressBar.Value += 1;
-                ProgressBar.ForeColor = Color.SaddleBrown;
+                ProgressBar.ForeColor = Color.Yellow;
             }
             else if (Result >= 18.5 && Result <= 24.9)
             {
@@ -136,9 +162,9 @@ namespace COMP123_S2019_Assignment_4_BMI_Calculator
             else if (Result >= 25 && Result <= 29.9)
             {
                 ConditionTextBox.Text = "Over Weight";
-                ConditionTextBox.ForeColor = Color.Orange;
+                ConditionTextBox.ForeColor = Color.DeepPink;
                 ProgressBar.Value += 3;
-                ProgressBar.ForeColor = Color.Orange;
+                ProgressBar.ForeColor = Color.DeepPink;
             }
             else if (Result >= 30)
             {
@@ -152,20 +178,9 @@ namespace COMP123_S2019_Assignment_4_BMI_Calculator
         private void ActiveTextBox_click(object sender, EventArgs e)
         {
             outputValue = 0;
-            outputString = "";
+            outputString = "0";
             ActiveTextBox = sender as TextBox;
         }
-
-        private void MetricButton_Click(object sender, EventArgs e)
-        {
-            heightUnitLabel.Text = "cm";
-            weightUnitLabel.Text = "kg";
-        }
-
-        private void ImperialButton_Click(object sender, EventArgs e)
-        {
-            heightUnitLabel.Text = "in";
-            weightUnitLabel.Text = "lb";
-        }
+        
     }
 }
