@@ -8,6 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/* COMP123 - S2019 - Assignment4 - BMI Calculator
+ * Author: Mohammad S Hossain
+ * ID# 300763479
+ * Version: 3.3 
+ * Last modified: July 26, 2019
+ */
 namespace COMP123_S2019_Assignment_4_BMI_Calculator
 {
     public partial class BMICalculator : Form
@@ -20,9 +26,7 @@ namespace COMP123_S2019_Assignment_4_BMI_Calculator
         public BMICalculator()
         {
             InitializeComponent();
-
         }
-
 
         private void BMICalculator_Load(object sender, EventArgs e)
         {
@@ -63,8 +67,6 @@ namespace COMP123_S2019_Assignment_4_BMI_Calculator
             ActiveTextBox = heightTextBox;
 
         }
-
-
 
         private void CalculatorTableLayoutPanel_Click(object sender, EventArgs e)
         {
@@ -181,6 +183,10 @@ namespace COMP123_S2019_Assignment_4_BMI_Calculator
             outputString = "0";
             ActiveTextBox = sender as TextBox;
         }
-        
+
+        private void BMICalculator_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
