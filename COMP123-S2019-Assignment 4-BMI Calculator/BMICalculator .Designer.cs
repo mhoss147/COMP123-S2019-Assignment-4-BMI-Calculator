@@ -73,7 +73,7 @@
             this.metricButton.AutoSize = true;
             this.metricButton.Checked = true;
             this.metricButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metricButton.Location = new System.Drawing.Point(120, 12);
+            this.metricButton.Location = new System.Drawing.Point(8, 8);
             this.metricButton.Name = "metricButton";
             this.metricButton.Size = new System.Drawing.Size(89, 29);
             this.metricButton.TabIndex = 21;
@@ -87,7 +87,7 @@
             // 
             this.ImperialButton.AutoSize = true;
             this.ImperialButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ImperialButton.Location = new System.Drawing.Point(8, 12);
+            this.ImperialButton.Location = new System.Drawing.Point(116, 8);
             this.ImperialButton.Name = "ImperialButton";
             this.ImperialButton.Size = new System.Drawing.Size(106, 29);
             this.ImperialButton.TabIndex = 22;
@@ -121,13 +121,12 @@
             // ResultTextBox
             // 
             this.ResultTextBox.Enabled = false;
-            this.ResultTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResultTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ResultTextBox.ForeColor = System.Drawing.Color.Black;
             this.ResultTextBox.Location = new System.Drawing.Point(116, 163);
             this.ResultTextBox.Name = "ResultTextBox";
-            this.ResultTextBox.Size = new System.Drawing.Size(169, 29);
+            this.ResultTextBox.Size = new System.Drawing.Size(169, 27);
             this.ResultTextBox.TabIndex = 26;
-            this.ResultTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // calculateBMIButton
             // 
@@ -145,12 +144,12 @@
             // ConditionTextBox
             // 
             this.ConditionTextBox.Enabled = false;
-            this.ConditionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConditionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConditionTextBox.ForeColor = System.Drawing.Color.Black;
-            this.ConditionTextBox.Location = new System.Drawing.Point(159, 205);
+            this.ConditionTextBox.Location = new System.Drawing.Point(132, 202);
             this.ConditionTextBox.Multiline = true;
             this.ConditionTextBox.Name = "ConditionTextBox";
-            this.ConditionTextBox.Size = new System.Drawing.Size(126, 31);
+            this.ConditionTextBox.Size = new System.Drawing.Size(152, 31);
             this.ConditionTextBox.TabIndex = 29;
             // 
             // CalculatorTableLayoutPanel
@@ -185,7 +184,7 @@
             // 
             // backspaceButton
             // 
-            this.backspaceButton.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.backspaceButton.BackColor = System.Drawing.Color.IndianRed;
             this.backspaceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backspaceButton.Location = new System.Drawing.Point(3, 111);
             this.backspaceButton.Name = "backspaceButton";
@@ -198,7 +197,7 @@
             // 
             // clearButton
             // 
-            this.clearButton.BackColor = System.Drawing.Color.Khaki;
+            this.clearButton.BackColor = System.Drawing.Color.DarkOrange;
             this.clearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearButton.Location = new System.Drawing.Point(189, 111);
             this.clearButton.Name = "clearButton";
@@ -371,10 +370,10 @@
             // 
             this.BMITextLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.PageTabList;
             this.BMITextLabel.AutoSize = true;
-            this.BMITextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BMITextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BMITextLabel.Location = new System.Drawing.Point(7, 163);
             this.BMITextLabel.Name = "BMITextLabel";
-            this.BMITextLabel.Size = new System.Drawing.Size(101, 24);
+            this.BMITextLabel.Size = new System.Drawing.Size(97, 22);
             this.BMITextLabel.TabIndex = 34;
             this.BMITextLabel.Text = "Your BMI:";
             // 
@@ -382,10 +381,10 @@
             // 
             this.YourConditionLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.PageTabList;
             this.YourConditionLabel.AutoSize = true;
-            this.YourConditionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.YourConditionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.YourConditionLabel.Location = new System.Drawing.Point(7, 205);
             this.YourConditionLabel.Name = "YourConditionLabel";
-            this.YourConditionLabel.Size = new System.Drawing.Size(126, 24);
+            this.YourConditionLabel.Size = new System.Drawing.Size(122, 22);
             this.YourConditionLabel.TabIndex = 34;
             this.YourConditionLabel.Text = "Your Health:";
             // 

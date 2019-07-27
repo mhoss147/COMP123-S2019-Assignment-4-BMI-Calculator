@@ -56,6 +56,9 @@ namespace COMP123_S2019_Assignment_4_BMI_Calculator
             heightUnitLabel.Text = "in";
             WeightUnitLabel.Text = "lb";
         }
+        /// <summary>
+        /// This is method for the Reset button to clear form
+        /// </summary>
         private void clearKeypad()
         {
             ResultTextBox.Text = "";
@@ -65,9 +68,25 @@ namespace COMP123_S2019_Assignment_4_BMI_Calculator
             weightTextBox.Text = "";
             ConditionTextBox.Text = "";
             ActiveTextBox = heightTextBox;
-
         }
 
+        /// <summary>
+        /// This is the ActiveTextBox click handler
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ActiveTextBox_click(object sender, EventArgs e)
+        {
+            outputValue = 0;
+            outputString = "";
+            ActiveTextBox = sender as TextBox;
+        }
+
+        /// <summary>
+        /// This is the Event Handler for the CalculatorTableLayoutPanel click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CalculatorTableLayoutPanel_Click(object sender, EventArgs e)
         {
             Button button = sender as Button;
@@ -107,7 +126,9 @@ namespace COMP123_S2019_Assignment_4_BMI_Calculator
             }
 
         }
-
+        /// <summary>
+        /// This is the method to calculate BMI result
+        /// </summary>
         private void BMIResult()
         {
             if (int.TryParse(heightTextBox.Text, out int myHeight) && int.TryParse(weightTextBox.Text, out int myWeight))
@@ -143,7 +164,9 @@ namespace COMP123_S2019_Assignment_4_BMI_Calculator
                 ResultTextBox.ForeColor = Color.Red;
             }
         }
-
+        /// <summary>
+        /// This is the method to display BMI condition
+        /// </summary>
         private void DisplayCondition()
         {
             ProgressBar.Maximum = 4;
@@ -176,14 +199,11 @@ namespace COMP123_S2019_Assignment_4_BMI_Calculator
                 ProgressBar.ForeColor = Color.Red;
             }
         }
-
-        private void ActiveTextBox_click(object sender, EventArgs e)
-        {
-            outputValue = 0;
-            outputString = "0";
-            ActiveTextBox = sender as TextBox;
-        }
-
+        /// <summary>
+        /// This is the event handler for BMICalculator Form Closing event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BMICalculator_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();

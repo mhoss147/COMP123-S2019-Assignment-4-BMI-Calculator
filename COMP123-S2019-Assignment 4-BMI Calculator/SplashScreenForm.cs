@@ -22,10 +22,20 @@ namespace COMP123_S2019_Assignment_4_BMI_Calculator
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// This is the event handler for the SplashScreenForm load event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SplashScreenForm_Load(object sender, EventArgs e)
         {
             SplashFormTimer.Enabled = true;
         }
+        /// <summary>
+        /// This is the event handler for SplashFormTimer  tick event  
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SplashFormTimer_Tick(object sender, EventArgs e)
         {
             SplashFormTimer.Enabled = false;
